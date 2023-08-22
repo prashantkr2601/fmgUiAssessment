@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMG UI Assignment</title>
+
+    <!-- BOOTSTRAP LINKS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- FONT AWESOME LINK FOR ICONS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="navbar-section">
+      <div class="bg-light">
+        <nav class="container navbar navbar-expand-lg navbar-light p-1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img alt="logo" src="./assets/LOGO.svg" width="200" height="50"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+              <div class="navbar-text">
+                <ul class="d-flex navbar-nav align-items-center gap-3">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Recruiter
+                    </a>
+                    <ul class="dropdown-menu" id="dropdown-menu"></ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Career Advice
+                    </a>
+                    <ul class="dropdown-menu" id="dropdown-menu-course"></ul>
+                  </li>
+                  <li class="nav-item" role="button">
+                    <a class="nav-link">Courses</a>
+                  </li>
+                  <li class="nav-item" role="button">
+                    <a class="nav-link">Upload CV</a>
+                  </li>
+                  <li class="nav-item" role="button">
+                    <a class="nav-link text-black fw-bold"
+                      ><i class="bi bi-star-fill me-1"></i>My Jobs</a
+                    >
+                  </li>
+                  <li class="nav-item" role="button">
+                    <button class="btn btn-primary">Post a job</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <section class="hero-img-section">
+      <div class="container text-center py-5">
+        <div>
+          <h1 class="text-white">Find the latest Jobs in Aviation</h1>
+          <h4 class="text-white py-2 mb-4">
+            Search Jobs | Advertise Vacancies | Discover Skilled Candidates
+          </h4>
+        </div>
+        <div>
+          <form
+            id="searchForm"
+            class="d-flex w-75 align-items-center justify-content-center mx-auto gap-4"
+          >
+            <input
+              id="title"
+              type="text"
+              class="form-control"
+              placeholder="Job Title"
+            />
+            <input
+              id="region"
+              type="text"
+              class="form-control"
+              placeholder="City or Region..."
+            />
+            <button id="searchBtn" class="btn btn-danger px-5" type="submit">
+              Search
+            </button>
+          </form>
+          <div id="searchResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-job-section py-4">
+      <div class="text-white text-center">
+        <h3>Search the latest Jobs in</h3>
+        <div
+          id="showJobs"
+          class="d-flex flex-wrap justify-content-center align-items-center gap-3 py-4"
+        ></div>
+      </div>
+      <p class="pt-3 d-flex gap-3 justify-content-center align-items-center">
+        <a
+          class="text-decoration-none text-white fw-bold"
+          data-bs-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Browse all Categories <i class="bi bi-chevron-down"></i>
+        </a>
+        <a class="text-white fw-bold">|</a>
+        <a
+          class="text-decoration-none text-white fw-bold"
+          data-bs-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <span class="web">Browse Jobs by Location</span>
+          <span class="mweb">By Location</span>
+        </a>
+      </p>
+      <div class="collapse container" id="collapseExample">
+        <div
+          id="browseData"
+          class="container text-white row pt-4 row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-2"
+        ></div>
+      </div>
+    </section>
+
+    <section class="feature-cards-section text-center py-5">
+      <h2 class="fw-normal">The World's Number 1 Aviation Job Board</h2>
+      <div
+        id="featureCards"
+        class="container justify-content-center card_item d-flex gap-5 mx-auto flex-wrap mt-4"
+      ></div>
+    </section>
+
+    <section class="campanies-hiring text-center py-5">
+      <h2>Companies hiring Now</h2>
+
+      <div class="container my-3">
+        <div
+          id="myCarousel"
+          class="carousel mx-auto px-4 slide"
+          data-bs-interval="100000000"
+          data-bs-ride="carousel"
+        >
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner container" id="carousel-group"></div>
+
+          <!-- Carousel controls -->
+          <a
+            class="bg-body-tertiary rounded-circle btn carousel-control-prev opacity-100"
+            style="width: 36px; height: 36px; left: 4%; top: 40%"
+            href="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <i style="color: #023e66" class="bi bi-chevron-left"></i
+          ></a>
+          <a
+            class="bg-body-tertiary carousel-control-next rounded-circle btn opacity-100"
+            style="width: 36px; height: 36px; right: 4%; top: 40%"
+            href="#myCarousel"
+            data-bs-slide="next"
+          >
+            <i style="color: #023e66" class="bi bi-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container p-5">
+        <div class="row mb-4">
+          <div class="col-xs-12 col-sm-6">
+            <div>
+              <img
+                class="margin-down rounded h-100 w-100"
+                src="./assets/AJS-Homepage-Imageblock-AVcourses.jpg"
+                width="570"
+                height="272"
+                alt="promo-image"
+              />
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <div
+              class="card card-hiring col h-100 w-100 d-flex flex-wrap justify-content-evenly rounded p-4"
+            >
+              <div class="card-icon">
+                <img
+                  src="./assets/upload.jpeg"
+                  width="80"
+                  height="80"
+                  alt="icon"
+                />
+              </div>
+              <div
+                class="card-content text-start d-flex flex-column justify-content-between"
+              >
+                <div class="card_header">
+                  <h4 class="card_title fw-bold">Keep your CV Updated</h4>
+                  <p class="card_description text-dark">
+                    Ensuring your CV is the best it can, we've got everything
+                    you need to help yours stand out from the crowd.
+                  </p>
+                </div>
+                <div class="btn-group d-flex gap-3">
+                  <button
+                    class="btn btn-outline-primary rounded py-2"
+                    style="flex: 1"
+                  >
+                    CV Tips
+                  </button>
+                  <button
+                    class="btn btn-primary fw-bold rounded py-2"
+                    style="flex: 1"
+                  >
+                    Upload Your CV
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div
+              class="card card-hiring col h-100 w-100 d-flex flex-wrap justify-content-evenly rounded p-4"
+            >
+              <div class="card-icon">
+                <img
+                  src="./assets/upload.jpeg"
+                  width="80"
+                  height="80"
+                  alt="icon"
+                />
+              </div>
+              <div
+                class="card-content text-start d-flex flex-column justify-content-between"
+              >
+                <div class="card_header">
+                  <h4 class="card_title fw-bold">
+                    Getting Started with your Job Search
+                  </h4>
+                  <p class="card_description text-dark">
+                    Our job guides are full of hints and tips, whether you're a
+                    looking for a more senior role, or simply starting afresh
+                    and heading down career path.
+                  </p>
+                </div>
+                <div class="btn-group d-flex gap-3">
+                  <button
+                    class="btn btn-outline-primary rounded py-2"
+                    style="flex: 1"
+                  >
+                    CV Tips
+                  </button>
+                  <button
+                    class="btn btn-primary fw-bold rounded py-2"
+                    style="flex: 1"
+                  >
+                    Upload Your CV
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <div>
+              <img
+                class="margin-up rounded h-100 w-100"
+                src="./assets/AJS-Homepage-Imageblock-vFairs.jpg"
+                width="570"
+                height="272"
+                alt="promo-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section py-4">
+      <div
+        id="footer-section"
+        class="container d-flex px-5 pt-4 row-cols-1 row-cols-sm-2 row-cols-md-4 text-white"
+      ></div>
+    </section>
+
+    <section class="sub-footer-section">
+      <div style="font-size: 12px" class="container text-white py-1 px-5">
+        &copy; 2009-2019 Friday Media Group Ltd. All rights reserved
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

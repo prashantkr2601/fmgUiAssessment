@@ -1,0 +1,130 @@
+@import url(./variables.css);
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar-text a {
+  color: var(--nightLight);
+}
+
+.bi-star-fill {
+  color: var(--primaryLight);
+}
+
+.hero-img-section {
+  background: url(../assets/AJS-Hero-Desktop.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+::-webkit-input-placeholder {
+  color: var(--primary);
+}
+
+.hero-img-section input,
+.hero-img-section button {
+  background-clip: padding-box;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+}
+.hero-img-section h1 {
+  font-size: 56px;
+}
+
+.search-job-section,
+.sub-footer-section {
+  background: var(--nightDark);
+}
+
+#showJobs p,
+.feature-cards .card-title {
+  color: var(--nightLight);
+}
+
+.feature-cards-section {
+  background: var(--dayLight);
+}
+
+.feature-card h4,
+.feature-cards-section h2,
+.campanies-hiring h2 {
+  color: var(--night);
+}
+
+.feature-card {
+  width: 22rem;
+}
+
+.feature-card p {
+  height: 5rem;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.footer-section {
+  background-color: var(--nightLight);
+}
+.footer-section .container {
+  gap: 8rem;
+}
+
+.footer-section .container p {
+  font-size: 13px;
+}
+
+.call-text {
+  color: var(--grey80);
+}
+
+.search-job-section .mweb {
+  display: none;
+}
+
+.card-hiring {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-img-section {
+    background: url(../assets/AJS-Hero-Mobile.jpg) no-repeat;
+    background-size: cover;
+  }
+  .hero-img-section h4 {
+    display: none;
+  }
+  .hero-img-section h1 {
+    font-size: 28px;
+    padding: 1.5rem;
+  }
+  form {
+    flex-direction: column;
+  }
+  .search-job-section .web {
+    display: none;
+  }
+  .search-job-section .mweb {
+    display: block;
+  }
+  .card-hiring,
+  .campanies-hiring .btn-group {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-section .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .icon-group {
+    justify-content: center;
+  }
+  .margin-up {
+    margin-top: 1rem;
+  }
+  .margin-down {
+    margin-bottom: 1rem;
+  }
+}

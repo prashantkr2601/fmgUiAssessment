@@ -1,0 +1,22 @@
+:root {
+  --primaryLight: #1b8dda;
+  --primary: #187dc1;
+  --primaryDark: #10659e;
+  --secondaryLight: #f47562;
+  --secondary: #f2624c;
+  --secondaryDark: #d35441;
+  --dayLight: #e2f1fa;
+  --day: #c8e1f0;
+  --dayDark: #83c1e9;
+  --nightLight: #024e80;
+  --night: #023e66;
+  --nightDark: #012944;
+  --grey20: #333333;
+  --grey29: #4a4b4b;
+  --grey45: #757575;
+  --grey55: #8d8d8d;
+  --grey70: #b3b3b3;
+  --grey80: #cccccc;
+  --grey90: #e6e6e6;
+  --grey94: #f0f0f0;
+}
