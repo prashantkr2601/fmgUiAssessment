@@ -130,7 +130,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["reactJs", "c", "c++"],
     experience: "2 years",
-    type: "full time",
+    type: "Full time",
     description:
       "for front end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of front end development",
   },
@@ -142,7 +142,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["java", "python", "c++", "nodeJs"],
     experience: "3 years",
-    type: "onSite",
+    type: "Onsite",
     description:
       "for back end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of back end development",
   },
@@ -164,7 +164,7 @@ const jobSearchData = [
     region: "banglore",
     company: "apple",
     salary: "1000000",
-    skills: ["java", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "Angular", "vueJs"],
     experience: "4 years",
     type: "remote",
     description:
@@ -178,7 +178,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["java", "python", "nodeJs", "mongodb"],
     experience: "2 years",
-    type: "full time",
+    type: "Full time",
     description:
       "for back end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of back end development",
   },
@@ -188,9 +188,9 @@ const jobSearchData = [
     region: "kolhapur",
     company: "nutanix",
     salary: "700000",
-    skills: ["nodeJs", "mongodb", "angularJs", "vueJs"],
+    skills: ["nodeJs", "mongodb", "Angular", "vueJs"],
     experience: "5 years",
-    type: "onSite",
+    type: "Onsite",
     description:
       "for full stack developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of full stack development",
   },
@@ -200,7 +200,7 @@ const jobSearchData = [
     region: "noida",
     company: "microsoft",
     salary: "500000",
-    skills: ["python", "c++", "reactJs", "angularJs"],
+    skills: ["python", "c++", "reactJs", "Angular"],
     experience: "2 years",
     type: "part time",
     description:
@@ -226,7 +226,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["java", "c++", "nodeJs", "mongodb"],
     experience: "2 years",
-    type: "full time",
+    type: "Full time",
     description:
       "for full stack developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of full stack development",
   },
@@ -236,9 +236,9 @@ const jobSearchData = [
     region: "chennai",
     company: "apple",
     salary: "100000",
-    skills: ["java", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "Angular", "vueJs"],
     experience: "2 years",
-    type: "onSite",
+    type: "Onsite",
     description:
       "for front end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of front end development",
   },
@@ -274,7 +274,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["java", "python", "c++", "vueJs"],
     experience: "4 years",
-    type: "full time",
+    type: "Full time",
     description:
       "for front end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of front end development",
   },
@@ -284,9 +284,9 @@ const jobSearchData = [
     region: "banglore",
     company: "FMG",
     salary: "100000",
-    skills: ["java", "python", "angularJs", "vueJs"],
+    skills: ["java", "python", "Angular", "vueJs"],
     experience: "8 years",
-    type: "onSite",
+    type: "Onsite",
     description:
       "for back end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of back end development",
   },
@@ -334,7 +334,7 @@ const jobSearchData = [
     salary: "100000",
     skills: ["java", "python", "c++", "nodeJs"],
     experience: "2 years",
-    type: "full time",
+    type: "Full time",
     description:
       "Looking for a full stack developer with required skills and relevant experience mentioned in JD",
   },
@@ -344,15 +344,26 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "100000",
-    skills: ["java", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "Angular", "vueJs"],
     experience: "2 years",
-    type: "onSite",
+    type: "Onsite",
     description:
       "Looking for a frontend  developer with required skills and relevant experience mentioned in JD",
   },
 ];
 
 const dropdownTextData = ["Dropdown 1", "Dropdown 2", "Dropdown 3"];
+
+// tranform first letter to uppercase
+
+function transformFirstLetterToUpperCase(str) {
+  let stringWords = str.split(" ");
+  let newString = "";
+  stringWords.forEach((word) => {
+    newString += word.charAt(0).toUpperCase() + word.slice(1) + " ";
+  });
+  return newString.trim();
+}
 
 // Drop down code
 let addDropdownText = "";
@@ -397,6 +408,7 @@ function handleJobSearch(event) {
   const validatedRegion = searchBoxValidation(region, "region");
 
   if (validatedTitle && validatedRegion) {
+    document.getElementById("errorMsg").style.display = "none";
     let filteredData = jobSearchData.filter(
       (item) =>
         item.title.toLowerCase().includes(title.toLowerCase()) &&
@@ -411,10 +423,12 @@ function handleJobSearch(event) {
         <div class="card-body" style="height:18rem">
           <div class="d-flex justify-content-between">
             <div class="text-start">
-            <h5 class="card-title fw-bold">${item.title}</h5>
-            <h6 class="card-subtitle mb-2 text-muted fw-bolder">${
+            <h5 class="card-title fw-bold">${transformFirstLetterToUpperCase(
+              item.title
+            )}</h5>
+            <h6 class="card-subtitle mb-2 text-muted fw-bolder">${transformFirstLetterToUpperCase(
               item.company
-            }</h6>
+            )}</h6>
             </div>
             <div>
             <img class="rounded-circle" src=${
@@ -422,10 +436,14 @@ function handleJobSearch(event) {
             }   alt="Slide ${i}" width="40" height="40"/>
             </div>
           </div>
-          <p class="card-text item-desc my-3">${item.description}</p>
+          <p class="card-text item-desc my-3">${transformFirstLetterToUpperCase(
+            item.description
+          )}</p>
           <p class="d-flex flex-wrap gap-2 justify-content-center">${item.skills
             .map((skill) => {
-              return `<span class="badge bg-primary">${skill}</span>`;
+              return `<span class="badge bg-primary">${transformFirstLetterToUpperCase(
+                skill
+              )}</span>`;
             })
             .join("")}</p> 
 
@@ -439,9 +457,9 @@ function handleJobSearch(event) {
           </div>
           <div class="d-flex justify-content-between">
           <p class="fw-bold"><i class="bi bi-cash"></i>&nbsp; ${item.salary}</p>
-          <p class="fw-bold"><i class="bi bi-geo-alt"></i>&nbsp; ${
+          <p class="fw-bold"><i class="bi bi-geo-alt"></i>&nbsp; ${transformFirstLetterToUpperCase(
             item.region
-          }</p>
+          )}</p>
           </div>
         </div>
         <button class="btn btn-primary">Apply Now</button>
@@ -456,6 +474,8 @@ function handleJobSearch(event) {
         "searchResult"
       ).innerHTML = `<h3 class="fw-bold px-4 py-2 text-bg-light text-danger">No Result Found</h3>`;
     }
+  } else {
+    document.getElementById("errorMsg").style.display = "block";
   }
 }
 
