@@ -112,15 +112,15 @@ const footerSectionData = [
 const jobSearchData = [
   {
     id: 1,
-    title: "full stack developer",
-    region: "mumbai",
-    company: "google",
+    title: "Full Stack developer",
+    region: "Mumbai",
+    company: "Google",
     salary: "100000",
     skills: ["java", "python", "c++"],
     experience: "2 years",
-    type: "full time",
+    type: "Full time",
     description:
-      "for full stack developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of full stack development",
+      "For full stack developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of full stack development",
   },
   {
     id: 2,
@@ -152,7 +152,7 @@ const jobSearchData = [
     region: "delhi",
     company: "facebook",
     salary: "10000",
-    skills: ["java", "python", "c++", "mongodb"],
+    skills: ["java", "python", "mongodb"],
     experience: "1 years",
     type: "part time",
     description:
@@ -164,7 +164,7 @@ const jobSearchData = [
     region: "banglore",
     company: "apple",
     salary: "1000000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "angularJs", "vueJs"],
     experience: "4 years",
     type: "remote",
     description:
@@ -176,7 +176,7 @@ const jobSearchData = [
     region: "mumbai",
     company: "google",
     salary: "100000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "nodeJs", "mongodb"],
     experience: "2 years",
     type: "full time",
     description:
@@ -188,7 +188,7 @@ const jobSearchData = [
     region: "kolhapur",
     company: "nutanix",
     salary: "700000",
-    skills: ["nodeJs", "mongodb", "reactJs", "angularJs", "vueJs"],
+    skills: ["nodeJs", "mongodb", "angularJs", "vueJs"],
     experience: "5 years",
     type: "onSite",
     description:
@@ -200,7 +200,7 @@ const jobSearchData = [
     region: "noida",
     company: "microsoft",
     salary: "500000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["python", "c++", "reactJs", "angularJs"],
     experience: "2 years",
     type: "part time",
     description:
@@ -212,7 +212,7 @@ const jobSearchData = [
     region: "pune",
     company: "amazon",
     salary: "1000000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "c++", "mongodb"],
     experience: "3 years",
     type: "remote",
     description:
@@ -224,7 +224,7 @@ const jobSearchData = [
     region: "india",
     company: "facebook",
     salary: "100000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "c++", "nodeJs", "mongodb"],
     experience: "2 years",
     type: "full time",
     description:
@@ -236,7 +236,7 @@ const jobSearchData = [
     region: "chennai",
     company: "apple",
     salary: "100000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "angularJs", "vueJs"],
     experience: "2 years",
     type: "onSite",
     description:
@@ -248,7 +248,7 @@ const jobSearchData = [
     region: "punjab",
     company: "google",
     salary: "100000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "c++"],
     experience: "3 years",
     type: "part time",
     description:
@@ -260,7 +260,7 @@ const jobSearchData = [
     region: "delhi",
     company: "nutanix",
     salary: "100560",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "c++", "nodeJs"],
     experience: "1 years",
     type: "remote",
     description:
@@ -272,7 +272,7 @@ const jobSearchData = [
     region: "banglore",
     company: "microsoft",
     salary: "100000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "python", "c++", "vueJs"],
     experience: "4 years",
     type: "full time",
     description:
@@ -284,7 +284,7 @@ const jobSearchData = [
     region: "banglore",
     company: "FMG",
     salary: "100000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "python", "angularJs", "vueJs"],
     experience: "8 years",
     type: "onSite",
     description:
@@ -296,7 +296,7 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "126360",
-    skills: ["nodeJs", "mongodb", "reactJs", "angularJs", "vueJs"],
+    skills: ["nodeJs", "mongodb", "reactJs"],
     experience: "6 years",
     type: "part time",
     description:
@@ -308,7 +308,7 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "100000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "python", "angular", "vueJs"],
     experience: "2 years",
     type: "hybrid",
     description:
@@ -320,7 +320,7 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "100000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "c++", "nodeJs"],
     experience: "3 years",
     type: "remote",
     description:
@@ -332,11 +332,11 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "100000",
-    skills: ["java", "python", "c++", "nodeJs", "mongodb"],
+    skills: ["java", "python", "c++", "nodeJs"],
     experience: "2 years",
     type: "full time",
     description:
-      "for full stack developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of full stack development",
+      "Looking for a full stack developer with required skills and relevant experience mentioned in JD",
   },
   {
     id: 20,
@@ -344,33 +344,12 @@ const jobSearchData = [
     region: "banglore",
     company: "friday media group",
     salary: "100000",
-    skills: ["java", "python", "c++", "reactJs", "angularJs", "vueJs"],
+    skills: ["java", "reactJs", "angularJs", "vueJs"],
     experience: "2 years",
     type: "onSite",
     description:
-      "for front end developer we need to have knowledge of java,python,c++ and also we need to have 2 years of experience in this field and also we need to have knowledge of front end development",
+      "Looking for a frontend  developer with required skills and relevant experience mentioned in JD",
   },
-];
-
-const hiringCardData = [
-  { fullImg: "./assets/AJS-Homepage-Imageblock-AVcourses.jpg" },
-  {
-    icon: "./assets/upload.jpeg",
-    heading: "Keep your CV Updated",
-    description:
-      "Ensuring your CV is the best it can, we've got everything you need to help yours stand out from the crowd.",
-    btnText1: "CV Tips",
-    btnText2: "Upload Your CV",
-  },
-  {
-    icon: "./assets/upload.jpeg",
-    heading: "Getting Started with your Job Search",
-    description:
-      "Our job guides are full of hints and tips, whether you're a looking for a more senior role, or simply starting afresh and heading down career path.",
-    btnText1: "CV Tips",
-    btnText2: "Upload Your CV",
-  },
-  { fullImg: "./assets/AJS-Homepage-Imageblock-vFairs.jpg" },
 ];
 
 const dropdownTextData = ["Dropdown 1", "Dropdown 2", "Dropdown 3"];
@@ -428,29 +407,44 @@ function handleJobSearch(event) {
       let output = "";
       filteredData.forEach((item, i) => {
         output += `
-        <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">${item.title}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${item.company}</h6>
-          <img src=${
-            cardImgeData[i]
-          }  alt="Slide ${i}" width="100" height="140"/>
-          <p class="card-text">${item.description}</p>
-          <p class="card-text"><small class="text-muted">${
-            item.region
-          }</small></p>
-          <p>${item.skills
+        <div class="card mb-3 search-card">
+        <div class="card-body" style="height:18rem">
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+            <h5 class="card-title fw-bold">${item.title}</h5>
+            <h6 class="card-subtitle mb-2 text-muted fw-bolder">${
+              item.company
+            }</h6>
+            </div>
+            <div>
+            <img class="rounded-circle" src=${
+              cardImgeData[i]
+            }   alt="Slide ${i}" width="40" height="40"/>
+            </div>
+          </div>
+          <p class="card-text item-desc my-3">${item.description}</p>
+          <p class="d-flex flex-wrap gap-2 justify-content-center">${item.skills
             .map((skill) => {
               return `<span class="badge bg-primary">${skill}</span>`;
             })
             .join("")}</p> 
 
-          <p>${item.type}</p>
-          <p>${item.experience}</p>
-          <p>${item.salary}</p>
-          <p>Apply Now</p>
-
+          <div class="d-flex justify-content-between">
+          <p class="fw-bold"><i class="bi bi-building"></i>&nbsp; ${
+            item.type
+          }</p>
+          <p class="fw-bold"><i class="bi bi-briefcase"></i>&nbsp; ${
+            item.experience
+          }</p>
+          </div>
+          <div class="d-flex justify-content-between">
+          <p class="fw-bold"><i class="bi bi-cash"></i>&nbsp; ${item.salary}</p>
+          <p class="fw-bold"><i class="bi bi-geo-alt"></i>&nbsp; ${
+            item.region
+          }</p>
+          </div>
         </div>
+        <button class="btn btn-primary">Apply Now</button>
         </div>
 
         `;
@@ -460,7 +454,7 @@ function handleJobSearch(event) {
     } else {
       document.getElementById(
         "searchResult"
-      ).innerHTML = `<h3>No Result Found</h3>`;
+      ).innerHTML = `<h3 class="fw-bold px-4 py-2 text-bg-light text-danger">No Result Found</h3>`;
     }
   }
 }
@@ -545,27 +539,6 @@ const carouselItem = cardGroupsData.map(
 
 const carousel = document.getElementById("carousel-group");
 carousel.innerHTML = carouselItem.join("").replaceAll(/\,/g, "");
-
-// Hiring Card code
-
-let hiringCard = "";
-hiringCardData.map((item, i) => {
-  hiringCard += item?.fullImg
-    ? `<div class="card mb-3">
-  <img src=${item.fullImg} class="card-img-top" alt="...">
-  </div>`
-    : `<div class="card mb-3">
-  <div class="card-body">
-    <img src=${item.icon}  alt="Slide ${i}" width="100" height="140"/>
-    <h5 class="card-title">${item.heading}</h5>
-    <p class="card-text">${item.description}</p>
-    <button class="btn btn-primary">${item.btnText1}</button>
-    <button class="btn btn-primary">${item.btnText2}</button>
-  </div>
-</div>`;
-});
-
-document.getElementById("campanies-hiring-card").innerHTML = hiringCard;
 
 // Footer code
 

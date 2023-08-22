@@ -19,6 +19,17 @@
   height: auto;
 }
 
+.item-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-card {
+  width: 25%;
+}
+
 ::-webkit-input-placeholder {
   color: var(--primary);
 }
@@ -101,6 +112,9 @@
   }
   form {
     flex-direction: column;
+  }
+  .search-card {
+    width: 100%;
   }
   .search-job-section .web {
     display: none;
