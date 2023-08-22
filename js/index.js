@@ -1,4 +1,4 @@
-const jobTopics = [
+const jobTopicsData = [
   "Engineering",
   "Pilots",
   "Captains",
@@ -26,7 +26,7 @@ const cardImgeData = [
   "./assets/company-logo1.jpg",
 ];
 
-const jobCategories = [
+const jobCategoriesData = [
   "A & P Mechanic",
   "Aerospace",
   "Analyst Jobs",
@@ -352,135 +352,15 @@ const jobSearchData = [
   },
 ];
 
-const dropdownText = ["Dropdown 1", "Dropdown 2", "Dropdown 3"];
+const dropdownTextData = ["Dropdown 1", "Dropdown 2", "Dropdown 3"];
 
-function showJobTopics() {
-  let res = "";
-  jobTopics.map((item) => {
-    res += `<p role='button' class="bg-white mb-0 px-3 py-1 rounded fw-bold">${item}</p>`;
-  });
-  document.getElementById("showJobs").innerHTML = res;
-}
-
-function addDropdownText() {
-  let res = "";
-  dropdownText.map((item) => {
-    res += `<li><a class="dropdown-item" href="#">${item}</a></li>`;
-  });
-  document.getElementById("dropdown-menu").innerHTML = res;
-  document.getElementById("dropdown-menu-course").innerHTML = res;
-}
-
-function browseData() {
-  let res2 = "";
-  jobCategories.map((item) => {
-    res2 += `<p role='button' class="col">${item}</p>`;
-  });
-  document.getElementById("browseData").innerHTML = res2;
-}
-
-function featureCard() {
-  let res = "";
-  if (featuresData.length > 0) {
-    featuresData.forEach((item) => {
-      res += `<div class="card p-3 shadow-sm feature-card">
-          <div><img class="h-auto" width="80" height="80" src="${item.iconUrl}"></div>
-          <div class="card-body">
-            <h4 class="card-title fw-bold">${item.title}</h4>
-            <p class="card-text text-dark-emphasis overflow-hidden">${item.description}</p>
-            <a href="#" class="text-decoration-none">${item.ctaText}</a>
-          </div>
-          </div>`;
-    });
-    document.getElementById("featureCards").innerHTML = res;
-  }
-}
-
-function showFooter() {
-  const footer = document.getElementById("footer-section");
-
-  footerSectionData.map((element) => {
-    const div = document.createElement("div");
-    div.classList.add("footer__item");
-    div.innerHTML = `
-      <div>
-        <h5 class="fw-bold mb-3">${element.headingText}</h5>
-      </div>
-      <div>
-          ${element.subHeadingText
-            .map((subHeadingEle) => {
-              return `<p class="fw-bold">${subHeadingEle}</p>`;
-            })
-            .join("")}
-      </div>
-      <div class="icon-group d-flex gap-3">
-            ${
-              element.iconElement
-                ? element.iconElement
-                    .map((icon) => {
-                      return `<div class="border rounded-circle py-1 px-2">${icon}</div>`;
-                    })
-                    .join("")
-                : ""
-            }
-      </div>
-      `;
-    footer.appendChild(div);
-  });
-}
-
-var userAgent =
-  navigator.userAgent || navigator.vendor || window.opera || undefined;
-
-function isMobile() {
-  const regexs = [
-    /(Android)(.+)(Mobile)/i,
-    /BlackBerry/i,
-    /iPhone|iPod/i,
-    /Opera Mini/i,
-    /IEMobile/i,
-  ];
-  return regexs.some((b) => this.userAgent.match(b));
-}
-const isMobileCheck = isMobile();
-
-const noOfCardInRow = !isMobileCheck ? 6 : 1;
-
-function ArrayGroupsOfN(arrayToGroup, n) {
-  var groupsOfN = (total, item, index, array) => {
-    if (index % n === 0) {
-      total.push(array.slice(index, index + n));
-    }
-    return total;
-  };
-  return (arrayToGroup || []).reduce(groupsOfN, []);
-}
-
-const cardGroupsData = ArrayGroupsOfN(cardImgeData, noOfCardInRow);
-
-const carouselItem = cardGroupsData.map(
-  (cardGroupData, i) =>
-    `<div class="row-cols-1 row-cols-lg-6 carousel-item ${
-      i == 0 ? "active" : ""
-    }">
-  ${cardGroupData.map(
-    (item, j) =>
-      `<img src=${item}  alt="Slide ${i + j}" width="100" height="140"/>`
-  )}            
-        </div>`
-);
-window.onload = () => {
-  const carousel = document.getElementById("carousel-group");
-  carousel.innerHTML = carouselItem.join("").replaceAll(/\,/g, "");
-};
-
-window.addEventListener("load", () => {
-  showJobTopics();
-  addDropdownText();
-  browseData();
-  featureCard();
-  showFooter();
+// Drop down code
+let addDropdownText = "";
+dropdownTextData.map((item) => {
+  addDropdownText += `<li><a class="dropdown-item" href="#">${item}</a></li>`;
 });
+document.getElementById("dropdown-menu").innerHTML = addDropdownText;
+document.getElementById("dropdown-menu-course").innerHTML = addDropdownText;
 
 //Job Search Functionality
 
@@ -567,3 +447,113 @@ function handleJobSearch(event) {
 document
   .getElementById("searchForm")
   .addEventListener("submit", handleJobSearch);
+
+// Job topics code
+
+let jobTopics = "";
+jobTopicsData.map((item) => {
+  jobTopics += `<p role='button' class="bg-white mb-0 px-3 py-1 rounded fw-bold">${item}</p>`;
+});
+document.getElementById("showJobs").innerHTML = jobTopics;
+
+// Job Categories Data
+
+let browseData = "";
+jobCategoriesData.map((item) => {
+  browseData += `<p role='button' class="col">${item}</p>`;
+});
+document.getElementById("browseData").innerHTML = browseData;
+
+// Feature  Card code
+
+let featureCard = "";
+if (featuresData.length > 0) {
+  featuresData.forEach((item) => {
+    featureCard += `<div class="card p-3 shadow-sm feature-card">
+          <div><img class="h-auto" width="80" height="80" src="${item.iconUrl}"></div>
+          <div class="card-body">
+            <h4 class="card-title fw-bold">${item.title}</h4>
+            <p class="card-text text-dark-emphasis overflow-hidden">${item.description}</p>
+            <a href="#" class="text-decoration-none">${item.ctaText}</a>
+          </div>
+          </div>`;
+  });
+  document.getElementById("featureCards").innerHTML = featureCard;
+}
+
+// Carousel code
+
+function isMobile() {
+  let userAgent =
+    navigator.userAgent || navigator.vendor || window.opera || undefined;
+  const regexs = [
+    /(Android)(.+)(Mobile)/i,
+    /BlackBerry/i,
+    /iPhone|iPod/i,
+    /Opera Mini/i,
+    /IEMobile/i,
+  ];
+  return regexs.some((b) => userAgent.match(b));
+}
+
+const noOfCardInRow = !isMobile() ? 6 : 1;
+
+function ArrayGroupsOfN(arrayToGroup, n) {
+  var groupsOfN = (total, item, index, array) => {
+    if (index % n === 0) {
+      total.push(array.slice(index, index + n));
+    }
+    return total;
+  };
+  return (arrayToGroup || []).reduce(groupsOfN, []);
+}
+
+const cardGroupsData = ArrayGroupsOfN(cardImgeData, noOfCardInRow);
+
+const carouselItem = cardGroupsData.map(
+  (cardGroupData, i) =>
+    `<div class="row-cols-1 row-cols-lg-6 carousel-item ${
+      i == 0 ? "active" : ""
+    }">
+  ${cardGroupData.map(
+    (item, j) =>
+      `<img src=${item}  alt="Slide ${i + j}" width="100" height="140"/>`
+  )}            
+        </div>`
+);
+
+const carousel = document.getElementById("carousel-group");
+carousel.innerHTML = carouselItem.join("").replaceAll(/\,/g, "");
+
+// Footer code
+
+const footer = document.getElementById("footer-section");
+
+footerSectionData.map((element) => {
+  const div = document.createElement("div");
+  div.classList.add("footer__item");
+  div.innerHTML = `
+      <div>
+        <h5 class="fw-bold mb-3">${element.headingText}</h5>
+      </div>
+      <div>
+          ${element.subHeadingText
+            .map((subHeadingEle) => {
+              return `<p class="fw-bold">${subHeadingEle}</p>`;
+            })
+            .join("")}
+      </div>
+      <div class="icon-group d-flex gap-3">
+            ${
+              element.iconElement
+                ? element.iconElement
+                    .map((icon) => {
+                      return `<div class="border rounded-circle py-1 px-2">${icon}</div>`;
+                    })
+                    .join("")
+                : ""
+            }
+      </div>
+      `;
+  footer.appendChild(div);
+});

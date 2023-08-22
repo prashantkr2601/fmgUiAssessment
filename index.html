@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FMG UI Assignment</title>
+    <title>FMG UI Assessment</title>
 
     <!-- BOOTSTRAP LINKS -->
     <link
@@ -29,7 +29,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="document.searchForm.title.focus()">
     <section class="navbar-section">
       <div class="bg-light">
         <nav class="container navbar navbar-expand-lg navbar-light p-1">
@@ -108,6 +108,7 @@
         </div>
         <div>
           <form
+            name="searchForm"
             id="searchForm"
             class="d-flex w-75 align-items-center justify-content-center mx-auto gap-4"
           >
