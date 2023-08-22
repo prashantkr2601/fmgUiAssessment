@@ -352,6 +352,27 @@ const jobSearchData = [
   },
 ];
 
+const hiringCardData = [
+  { fullImg: "./assets/AJS-Homepage-Imageblock-AVcourses.jpg" },
+  {
+    icon: "./assets/upload.jpeg",
+    heading: "Keep your CV Updated",
+    description:
+      "Ensuring your CV is the best it can, we've got everything you need to help yours stand out from the crowd.",
+    btnText1: "CV Tips",
+    btnText2: "Upload Your CV",
+  },
+  {
+    icon: "./assets/upload.jpeg",
+    heading: "Getting Started with your Job Search",
+    description:
+      "Our job guides are full of hints and tips, whether you're a looking for a more senior role, or simply starting afresh and heading down career path.",
+    btnText1: "CV Tips",
+    btnText2: "Upload Your CV",
+  },
+  { fullImg: "./assets/AJS-Homepage-Imageblock-vFairs.jpg" },
+];
+
 const dropdownTextData = ["Dropdown 1", "Dropdown 2", "Dropdown 3"];
 
 // Drop down code
@@ -524,6 +545,27 @@ const carouselItem = cardGroupsData.map(
 
 const carousel = document.getElementById("carousel-group");
 carousel.innerHTML = carouselItem.join("").replaceAll(/\,/g, "");
+
+// Hiring Card code
+
+let hiringCard = "";
+hiringCardData.map((item, i) => {
+  hiringCard += item?.fullImg
+    ? `<div class="card mb-3">
+  <img src=${item.fullImg} class="card-img-top" alt="...">
+  </div>`
+    : `<div class="card mb-3">
+  <div class="card-body">
+    <img src=${item.icon}  alt="Slide ${i}" width="100" height="140"/>
+    <h5 class="card-title">${item.heading}</h5>
+    <p class="card-text">${item.description}</p>
+    <button class="btn btn-primary">${item.btnText1}</button>
+    <button class="btn btn-primary">${item.btnText2}</button>
+  </div>
+</div>`;
+});
+
+document.getElementById("campanies-hiring-card").innerHTML = hiringCard;
 
 // Footer code
 
